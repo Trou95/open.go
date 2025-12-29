@@ -1,0 +1,3 @@
+[submodule "include/capi"]
+	path = include/capi
+	url = https://github.com/openmultiplayer/open.mp-capi
