@@ -18,7 +18,7 @@ add_library(bridge STATIC ${BRIDGE_SOURCES})
 target_include_directories(bridge PRIVATE
     ${INCLUDE_DIR}
     ${INCLUDE_DIR}/bridge
-    ${INCLUDE_DIR}/capi
+    ${INCLUDE_DIR}/capi/include
 )
 
 if(DEBUG)

@@ -4,7 +4,7 @@
 #include <stdbool.h>
 #include <stdint.h>
 
-#include "../capi/ompcapi.h"
+#include "../capi/include/ompcapi.h"
 
 #define DECL_VOID_FN(WRAP_NAME, MEMBER, PARAMS, ARGS) \
     static inline void WRAP_NAME PARAMS { m_api.MEMBER ARGS; }
