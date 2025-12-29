@@ -13,6 +13,7 @@ static void onComponentReady(void)
     if (m_api.Event.AddHandler)
     {
         m_api.Event.AddHandler("onPlayerConnect", EventPriorityType_Default, (void *)onPlayerConnectCB);
+        m_api.Event.AddHandler("onPlayerDisconnect", EventPriorityType_Default, (void *)onPlayerDisconnectCB);
         m_api.Event.AddHandler("onPlayerRequestSpawn", EventPriorityType_Default, (void *)onPlayerRequestSpawnCB);
         m_api.Event.AddHandler("onPlayerRequestClass", EventPriorityType_Default, (void *)onPlayerRequestClassCB);
         m_api.Event.AddHandler("onPlayerSpawn", EventPriorityType_Default, (void *)onPlayerSpawnCB);

@@ -124,6 +124,16 @@ func OnPlayerConnect(pPtr unsafe.Pointer) {
 	Natives.core.SendClientMessageToAll(0xFFFFFFFF, text)
 }
 
+//export OnPlayerDisconnect
+func OnPlayerDisconnect(pPtr unsafe.Pointer, reason C.int) {
+	player := (*Player)(pPtr)
+
+	text := fmt.Sprintf("%s left the server", player.GetName())
+	Natives.core.SendClientMessageToAll(0xFFFFFFFF, text)
+
+	Server.Pools.Players[player.ID()].Ptr = nil
+}
+
 //export OnPlayerSpawn
 func OnPlayerSpawn(pPtr unsafe.Pointer) {}
 

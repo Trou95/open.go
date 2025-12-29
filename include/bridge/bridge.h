@@ -21,6 +21,7 @@ void DebugLogFormat(const char *format, ...);
 
 // Event callbacks (bridge.c)
 bool onPlayerConnectCB(struct EventArgs_onPlayerConnect *args);
+bool onPlayerDisconnectCB(struct EventArgs_onPlayerDisconnect *args);
 bool onPlayerSpawnCB(struct EventArgs_onPlayerSpawn *args);
 bool onPlayerRequestSpawnCB(struct EventArgs_onPlayerRequestSpawn *args);
 bool onPlayerRequestClassCB(struct EventArgs_onPlayerRequestClass *args);
@@ -28,6 +29,7 @@ bool onPlayerRequestClassCB(struct EventArgs_onPlayerRequestClass *args);
 // GO Event Handlers (Go tarafindan export ediliyor)
 extern void OnComponentLoad(void);
 extern void OnPlayerConnect(void *player);
+extern void OnPlayerDisconnect(void *player, int reason);
 extern void OnPlayerSpawn(void *player);
 extern void OnPlayerRequestSpawn(void *player);
 extern void OnPlayerRequestClass(void *player, int classId);

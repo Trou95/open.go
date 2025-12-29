@@ -13,6 +13,20 @@ bool onPlayerConnectCB(struct EventArgs_onPlayerConnect *args)
     return true;
 }
 
+bool onPlayerDisconnectCB(struct EventArgs_onPlayerDisconnect *args)
+{
+
+    if (args == NULL || args->size == 0 || args->list == NULL || args->list->player == NULL || args->list->reason == NULL)
+        return true;
+
+    void *player = *args->list->player;
+    int reason = *args->list->reason;
+
+    OnPlayerDisconnect(player, reason);
+
+    return true;
+}
+
 bool onPlayerSpawnCB(struct EventArgs_onPlayerSpawn *args)
 {
 
